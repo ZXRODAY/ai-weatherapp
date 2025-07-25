@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <div class="location-info">
+                <h1 class="city">Loading location...</h1>
+                <p class="date">Loading date...</p>
+            </div>
+            <div class="weather-info">
+                <div class="weather-icon">
+                    <span class="emoji">🌤️</span>
+                </div>
+                <div class="temperature">
+                    <h2 class="temp">--°C</h2>
+                    <p class="feels-like">Feels like: --°C</p>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="detail">
+                    <span class="emoji">💨</span>
+                    <p>Wind: <span class="wind">-- km/h</span></p>
+                </div>
+                <div class="detail">
+                    <span class="emoji">💧</span>
+                    <p>Humidity: <span class="humidity">--%</span></p>
+                </div>
+                <div class="detail">
+                    <span class="emoji">🌡️</span>
+                    <p>Pressure: <span class="pressure">-- hPa</span></p>
+                </div>
+            </div>
+            <div class="loading-indicator">
+                <p>Loading weather data...</p>
+                <div class="spinner"></div>
+            </div>
+            
+            <div class="error-message" style="display: none;">
+                <p>Unable to fetch weather data. Please allow location access and try again.</p>
+            </div>
+            
+            <button class="chat-button">
+                <span class="chat-icon">💬</span>
+                <span class="chat-text">Ask about weather</span>
+            </button>
+        </div>
+        
+        <!-- Chatbot Interface -->
+        <div class="chatbot-container" style="display: none;">
+            <div class="chatbot-header">
+                <h3>Weather Assistant</h3>
+                <button class="close-chat-button">×</button>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hello! I'm your weather assistant. Ask me anything about the weather or for recommendations.
+                    </div>
+                </div>
+            </div>
+            <div class="typing-indicator" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" placeholder="Type your message here...">
+                <button class="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
